@@ -167,6 +167,7 @@ searchBar.addEventListener("keyup", async (e) => {
 });
 
 progressBar.addEventListener('mouseup', seekProgressBar); //seeks only when the mouse is released
+progressBar.addEventListener('pointerup', seekProgressBar); //for mobile
 progressBar.addEventListener("input", (e) => {
 	e.stopPropagation();
 	//updating UI while dragging
