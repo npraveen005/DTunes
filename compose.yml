@@ -1,0 +1,9 @@
+name: dtunes
+services:
+  web:
+    container_name: dtunes
+    build: .
+    ports:
+      - "${EXTERNAL_PORT}:${PORT}"
+    env_file:
+      - .env
