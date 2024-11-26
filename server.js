@@ -135,7 +135,7 @@ app.get("/get-spotify-token", async (req, res) => {
 
 
 app.get("/", async (req, res) => {
-    res.sendFile("./index.html", {root: __dirname});
+    res.sendFile("./public/index.html", {root: __dirname});
 });
 
 app.get("/login", (req, res) => {
