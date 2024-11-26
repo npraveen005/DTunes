@@ -139,15 +139,15 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-    res.sendFile("./login.html", {root: __dirname});
+    res.sendFile(path.join(__dirname, "public", "login.html"));
 });
 
 app.get("/register", (req, res) => {
-    res.sendFile("./register.html", {root: __dirname});
+    res.sendFile(path.join(__dirname, "public", "register.html"));
 });
 
 app.get("/upload", (req, res) => {
-    res.sendFile("./upload.html", {root: __dirname});
+    res.sendFile(path.join(__dirname, "public", "upload.html"));
 })
 
 app.post("/register", async (req, res) => {
