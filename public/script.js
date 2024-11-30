@@ -78,6 +78,14 @@ if ('mediaSession' in navigator) {
 	});
 }
 
+
+// Spoof the User-Agent to mimic a desktop browser
+Object.defineProperty(navigator, 'userAgent', {
+  get: () => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36'
+});
+
+
+
 //creating apotify embed controller
 window.onSpotifyIframeApiReady = (IFrameAPI) => {
 	let options = {
